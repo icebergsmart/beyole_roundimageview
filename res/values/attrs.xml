@@ -11,5 +11,9 @@
         <attr name="borderRadius" />
         <attr name="imageType" />
     </declare-styleable>
+    <declare-styleable name="XfermodeRoundImageView">
+        <attr name="borderRadius" />
+        <attr name="imageType" />
+    </declare-styleable>
 
 </resources>

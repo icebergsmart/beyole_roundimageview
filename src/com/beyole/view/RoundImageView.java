@@ -147,4 +147,41 @@ public class RoundImageView extends ImageView {
 		super.onSizeChanged(w, h, oldw, oldh);
 		mRectF = new RectF(0, 0, getWidth(), getHeight());
 	}
+
+	/**
+	 * 对外公布的设置borderRadius方法
+	 * 
+	 * @param borderRadius
+	 */
+	public void setBorderRadius(int borderRadius) {
+		int pxValue = dp2px(borderRadius);
+		if (this.mBorderRadius != pxValue) {
+			this.mBorderRadius = pxValue;
+			// 这时候不需要父布局的onLayout,所以只需要调用onDraw即可
+			invalidate();
+		}
+	}
+
+	/**
+	 * 对外公布的设置形状的方法
+	 * 
+	 * @param type
+	 */
+	public void setType(int type) {
+		if (this.type != type) {
+			this.type = type;
+			if (this.type != TYPE_CIRCLE && this.type != TYPE_ROUND) {
+				this.type = TYPE_CIRCLE;
+			}
+			// 这个时候改变形状了，就需要调用父布局的onLayout，那么此view的onMeasure方法也会被调用
+			requestLayout();
+		}
+	}
+
+	/**
+	 * dp2px
+	 */
+	public int dp2px(int val) {
+		return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, val, getResources().getDisplayMetrics());
+	}
 }
