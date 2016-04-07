@@ -1,22 +1,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:beyole="http://schemas.android.com/apk/res/com.beyole.roundimageview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <com.beyole.view.XfermodeRoundImageView
-        android:layout_width="200dip"
-        android:layout_height="200dip"
-        android:src="@drawable/demo"
-        beyole:borderRadius="20dip"
-        beyole:imageType="round" />
+    <ImageView
+        android:id="@+id/id_img"
+        android:layout_width="250.0dip"
+        android:layout_height="150.0dip"
+        android:layout_gravity="center_horizontal" />
+     <ImageView
+        android:id="@+id/id_img1"
+        android:layout_width="250.0dip"
+        android:layout_height="150.0dip"
+        android:layout_gravity="center_horizontal" />
 
-    <com.beyole.view.XfermodeRoundImageView
-        android:layout_width="200dip"
-        android:layout_height="200dip"
-        android:src="@drawable/demo"
-        beyole:borderRadius="20dip"
-        beyole:imageType="circle" />
-    
 </LinearLayout>
