@@ -17,10 +17,10 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		imageView = (ImageView) findViewById(R.id.id_img);
+		/*imageView = (ImageView) findViewById(R.id.id_img);
 		imageView1 = (ImageView) findViewById(R.id.id_img1);
 		Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.demo);
 		imageView.setImageDrawable(new CircleDrawableImageView(bitmap));
-		imageView1.setImageDrawable(new RoundDrawableImageView(bitmap));
+		imageView1.setImageDrawable(new RoundDrawableImageView(bitmap));*/
 	}
 }
